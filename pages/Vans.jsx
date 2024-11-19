@@ -20,6 +20,7 @@ export default function Vans() {
       .catch((err) => console.log(err));
   }, []);
 
+  console.log(vans);
   const vanElements = vans.map((van) => (
     <div key={van.id} className="van-tile">
       <img src={van.imageUrl} />
@@ -34,5 +35,5 @@ export default function Vans() {
     </div>
   ));
 
-  return <h1>Vans page goes here 🚐</h1>;
+  return <>{vanElements}</>;
 }
